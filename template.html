@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title></title>
+    <style>
+        /* Resetting default margin and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        /* Styling for navigation bar */
+        nav {
+            background-color: purple;
+            color: #fff;
+            padding: 10px;
+        }
+        
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 16px
+        }
+
+        nav li a:hover:not(.active) {
+            background-color: purple;
+        }
+
+        .active {
+            background-color: rgb(210, 0, 210);
+        }
+        
+        /* Styling for footer */
+        footer {
+            background-color: purple;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+        
+        /* Styling for columns */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 20px;
+        }
+        
+        .column {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px 5px rgba(0,0,0,0.3);
+        }
+
+        .column.small{
+            flex-basis: calc(33% - 10px);
+        }
+
+        .column.big{
+            flex-basis: calc(67% - 10px);
+        }
+
+        .column.default{
+            flex-basis: 100%;
+        }
+
+        
+        html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+        a:link { color: blue; }
+
+        a:visited { color: purple; }
+
+        a:hover { color: black; }
+        
+        /* Media query for responsiveness */
+        @media screen and (max-width: 768px) {
+            .column {
+                flex-basis: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a class ="active" href="index.html">Home</a></li>
+            <li><a href="tutoring.html">Tutoring</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <div class="column small">
+            <h2>Column 1</h2>
+            <p></p>
+        </div>
+        <div class="column big">
+            <h2></h2>
+            <p>This is the second column.</p>
+        </div>
+        <div class="column default">
+        <p>test test</p></div>
+    </div>
+    
+    <footer>
+        <p style = "padding: 10px">Find me on social media.</p> <a href="https://www.linkedin.com/in/bryce-mchugh-5629a8215", style="color: white">
+            <i class="fa fa-linkedin w3-hover-opacity">
+            </i>
+        </a>
+    </footer>
+</body>
+</html>
